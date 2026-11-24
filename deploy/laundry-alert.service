@@ -1,0 +1,15 @@
+[Unit]
+Description=Laundry Alert API and PWA
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=laundry
+WorkingDirectory=/opt/laundry-alert/Backend
+EnvironmentFile=/etc/laundry-alert.env
+UMask=0077
+ExecStart=/opt/laundry-alert/Backend/.venv/bin/python -m uvicorn main:app --host 127.0.0.1 --port 8000
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

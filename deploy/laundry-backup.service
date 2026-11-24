@@ -1,0 +1,10 @@
+[Unit]
+Description=Back up Laundry Alert SQLite
+
+[Service]
+Type=oneshot
+User=laundry
+WorkingDirectory=/opt/laundry-alert/Backend
+EnvironmentFile=/etc/laundry-alert.env
+UMask=0077
+ExecStart=/opt/laundry-alert/Backend/.venv/bin/python admin.py backup /var/lib/laundry-alert/backups

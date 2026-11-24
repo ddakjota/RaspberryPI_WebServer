@@ -1,0 +1,9 @@
+[Unit]
+Description=Daily Laundry Alert SQLite backup
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target

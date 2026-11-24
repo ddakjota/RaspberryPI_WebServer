@@ -1,0 +1,37 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node.js
+node_modules/
+dist/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+*.pem
+*.secrets
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite3-journal
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
